@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PatinhasQueBrilhamAPI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\Release\\netcoreapp2\.2\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="PatinhasQueBrilham.Repository.PatinhasContext" description="" value="Data Source=tcp:patinhasquebrilhamdbserver.database.windows.net,1433;Initial Catalog=PatinhasQueBrilham_db;User Id=Cheyne@patinhasquebrilhamdbserver;Password=Patinhas2019" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\Release\\netcoreapp2\.2\\win-x86\\PubTmp\\EFSQLScripts\\PatinhasQueBrilham\.Repository\.PatinhasContext\.sql$" />
+  </parameter>
+</parameters>

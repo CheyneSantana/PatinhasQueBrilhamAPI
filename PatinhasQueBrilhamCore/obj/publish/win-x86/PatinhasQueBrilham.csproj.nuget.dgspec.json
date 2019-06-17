@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilham\\PatinhasQueBrilham\\PatinhasQueBrilham.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilham\\PatinhasQueBrilham\\PatinhasQueBrilham.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilham\\PatinhasQueBrilham\\PatinhasQueBrilham.csproj",
+        "projectName": "PatinhasQueBrilham",
+        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilham\\PatinhasQueBrilham\\PatinhasQueBrilham.csproj",
+        "packagesPath": "C:\\Users\\Cheyne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilham\\PatinhasQueBrilham\\obj\\publish\\win-x86\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cheyne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Spire.Doc": {
+              "target": "Package",
+              "version": "[7.5.9, )"
+            },
+            "ViaCEP": {
+              "target": "Package",
+              "version": "[2.0.48, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

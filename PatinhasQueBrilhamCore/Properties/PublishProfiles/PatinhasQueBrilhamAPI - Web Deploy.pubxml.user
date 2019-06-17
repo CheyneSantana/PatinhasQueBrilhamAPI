@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeE/V+5PrVkaJ/LUUYZwxpwAAAAACAAAAAAAQZgAAAAEAACAAAAC9W7G8SYLTzlom10JacwlE9Az37LeuAJf7x+55eBa3XQAAAAAOgAAAAAIAACAAAABJJf7KaX8kl09bKfXZgnnFuOEvG2SMqRJ78q4Ecd98KoAAAAD20yE2v7/SzsseY6PHcrXYlf+xG2BZ2LYB/FstWTr2XtzK09gU/Ldg7zcpsMMRdjr4wDOKcgpwetBo8VqoOWiW8IQfa26PjH07h8nirOi6y3OL0i7UdCzQEKtRzM3D+OlLA4pJ0ksXdrajce+XQPd1eeFfQyUwNaFXzsBlzIV7SkAAAADMEjLWQXqbmR9J5NQXuu66xA27dzE1rh6//3h+Gz4vSKeU9DUVaz5VHyzyX9I5wb60830I11Ld7/Y+FXVJA4Ho</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="PatinhasQueBrilham.Repository.PatinhasContext">
+      <Value>Data Source=tcp:patinhasquebrilhamdbserver.database.windows.net,1433%3bInitial Catalog=PatinhasQueBrilham_db%3bUser Id=Cheyne%40patinhasquebrilhamdbserver%3bPassword=Patinhas2019</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
