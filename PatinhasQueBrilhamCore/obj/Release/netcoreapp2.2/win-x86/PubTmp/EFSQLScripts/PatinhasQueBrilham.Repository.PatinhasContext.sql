@@ -704,3 +704,24 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190618162303_RemovidoDetalhesAnimais')
+BEGIN
+    DECLARE @var12 sysname;
+    SELECT @var12 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[adocao]') AND [c].[name] = N'Detalhes');
+    IF @var12 IS NOT NULL EXEC(N'ALTER TABLE [adocao] DROP CONSTRAINT [' + @var12 + '];');
+    ALTER TABLE [adocao] DROP COLUMN [Detalhes];
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190618162303_RemovidoDetalhesAnimais')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190618162303_RemovidoDetalhesAnimais', N'2.2.4-servicing-10062');
+END;
+
+GO
+

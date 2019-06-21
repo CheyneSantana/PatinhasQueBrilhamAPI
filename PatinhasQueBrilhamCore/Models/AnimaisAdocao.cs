@@ -45,7 +45,6 @@ namespace PatinhasQueBrilham.Models
         [Required]
         public string PathFoto { get; set; }
         [Required]
-        public string Detalhes { get; set; }
         public int Adotado { get; set; }
 
         public enum KdAtivo
