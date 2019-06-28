@@ -25,7 +25,7 @@ namespace PatinhasQueBrilham.Service
 
         private User insert()
         {
-
+            this._user.Email = this._user.Email.Trim();
             if (string.IsNullOrWhiteSpace(this._password))
                 throw new AppException("A senha é requerida");
 
