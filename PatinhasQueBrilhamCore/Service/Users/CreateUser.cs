@@ -37,6 +37,7 @@ namespace PatinhasQueBrilham.Service
 
             this._user.PasswordHash = passwordHash;
             this._user.PasswordSalt = passwordSalt;
+            this._user.IsAdmin = false;
 
             _context.users.Add(this._user);
             _context.SaveChanges();

@@ -66,6 +66,7 @@ namespace PatinhasQueBrilham.Controllers
                 Sobrenome = user.Sobrenome,
                 TelCel = user.TelCel,
                 TelRes = user.TelRes,
+                IsAdmin = user.IsAdmin,
                 Token = tokenString
             });
         }
