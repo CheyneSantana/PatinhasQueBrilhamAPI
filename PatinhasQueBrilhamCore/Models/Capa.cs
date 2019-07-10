@@ -12,8 +12,6 @@ namespace PatinhasQueBrilham.Models
         public int capaId { get; set; }
         [Required]
         public string path { get; set; }
-        public string titulo { get; set; }
-        public string descricao { get; set; }
         public string link { get; set; }
         [Required]
         public int ativo { get; set; }
