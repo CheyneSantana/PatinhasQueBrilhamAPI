@@ -33,8 +33,8 @@ namespace PatinhasQueBrilhamCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //string connection = @"Server=patinhasquebrilhamdbserver.database.windows.net;Database=PatinhasQueBrilham_db;Trusted_Connection=False;Encrypt=True;ConnectRetryCount=0;User ID=Cheyne;Password=Patinhas2019";
-            string connection = @"Server=(LocalDb)\MSSQLLocalDB;Database=PatinhasDB;Trusted_Connection=True;ConnectRetryCount=0;";
+            string connection = @"Server=patinhasquebrilhamdbserver.database.windows.net;Database=PatinhasQueBrilham_db;Trusted_Connection=False;Encrypt=True;ConnectRetryCount=0;User ID=Cheyne;Password=Patinhas2019";
+            //string connection = @"Server=(LocalDb)\MSSQLLocalDB;Database=PatinhasDB;Trusted_Connection=True;ConnectRetryCount=0;";
 
             services.AddCors();
             services.AddDbContext<PatinhasContext>(options => options.UseSqlServer(connection));
