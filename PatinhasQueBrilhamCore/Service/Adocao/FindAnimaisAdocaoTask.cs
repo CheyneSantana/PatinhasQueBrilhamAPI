@@ -23,9 +23,19 @@ namespace PatinhasQueBrilham.Service
             animais = this._context.adocao.Where(w => w.Adotado == (int)AppSettings.KdAtivo.Não);
         }
 
+        private void getAll()
+        {
+            animais = this._context.adocao;
+        }
+
         public void buscar()
         {
             this.getAnimais();
+        }
+
+        public void buscarTodos()
+        {
+            this.getAll();
         }
     }
 }

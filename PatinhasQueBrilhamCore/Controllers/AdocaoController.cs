@@ -44,6 +44,24 @@ namespace PatinhasQueBrilham.Controllers
             }
         }
 
+        [HttpGet("[action]")]
+        public IActionResult getAllAnimais()
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.FindAllAnimais();
+                if (adocaoService.animais != null)
+                    return Ok(adocaoService.animais);
+                else
+                    return Ok();
+            }
+            catch(AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
         [HttpPost("[action]")]
         public IActionResult EnviarSolicitacao([FromBody]FormularioDTO formulario)
         {
