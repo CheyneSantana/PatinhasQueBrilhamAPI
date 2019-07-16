@@ -725,3 +725,52 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190628194524_UserAdmin')
+BEGIN
+    ALTER TABLE [users] ADD [IsAdmin] bit NOT NULL DEFAULT 0;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190628194524_UserAdmin')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190628194524_UserAdmin', N'2.2.4-servicing-10062');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190703182950_AlteradoCapa')
+BEGIN
+    DECLARE @var13 sysname;
+    SELECT @var13 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[capa]') AND [c].[name] = N'descricao');
+    IF @var13 IS NOT NULL EXEC(N'ALTER TABLE [capa] DROP CONSTRAINT [' + @var13 + '];');
+    ALTER TABLE [capa] DROP COLUMN [descricao];
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190703182950_AlteradoCapa')
+BEGIN
+    DECLARE @var14 sysname;
+    SELECT @var14 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[capa]') AND [c].[name] = N'titulo');
+    IF @var14 IS NOT NULL EXEC(N'ALTER TABLE [capa] DROP CONSTRAINT [' + @var14 + '];');
+    ALTER TABLE [capa] DROP COLUMN [titulo];
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190703182950_AlteradoCapa')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190703182950_AlteradoCapa', N'2.2.4-servicing-10062');
+END;
+
+GO
+

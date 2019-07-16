@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "projectName": "PatinhasQueBrilhamCore",
+        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "packagesPath": "C:\\Users\\Cheyne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\publish\\linux-x64\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cheyne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )",
+              "autoReferenced": true
+            },
+            "Spire.Doc": {
+              "target": "Package",
+              "version": "[7.6.5, )"
+            },
+            "ViaCEP": {
+              "target": "Package",
+              "version": "[2.0.48, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
