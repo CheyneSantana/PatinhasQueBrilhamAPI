@@ -36,6 +36,13 @@ namespace PatinhasQueBrilham.Service
             this.animais = findAnimaisAdocao.animais;
         }
 
+        public void findNomeAnimal(string prNomeAnimal)
+        {
+            FindAnimaisAdocaoTask findAnimaisAdocao = new FindAnimaisAdocaoTask(this._context);
+            findAnimaisAdocao.buscarNome(prNomeAnimal);
+            this.animais = findAnimaisAdocao.animais;
+        }
+
         public void FindCep(string cep)
         {
             FindCep findCep = new FindCep(cep);

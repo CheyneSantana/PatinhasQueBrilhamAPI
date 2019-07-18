@@ -12,6 +12,7 @@ namespace PatinhasQueBrilham.Service
     {
         private PatinhasContext _context;
         public IEnumerable<AnimaisAdocao> animais;
+        private string NomeAnimal;
 
         public FindAnimaisAdocaoTask(PatinhasContext context)
         {
@@ -28,6 +29,13 @@ namespace PatinhasQueBrilham.Service
             animais = this._context.adocao;
         }
 
+        private void getNomeAnimal()
+        {
+            animais = this._context.adocao.Where(w => w.NomeAtual.ToUpper().Contains(this.NomeAnimal.ToUpper()));
+            if (animais != null)
+                throw new AppException("Nenhum animal encontrado com esse nome");
+        }
+
         public void buscar()
         {
             this.getAnimais();
@@ -36,6 +44,12 @@ namespace PatinhasQueBrilham.Service
         public void buscarTodos()
         {
             this.getAll();
+        }
+
+        public void buscarNome(string prNomeAnimal)
+        {
+            this.NomeAnimal = prNomeAnimal;
+            this.getNomeAnimal();
         }
     }
 }
