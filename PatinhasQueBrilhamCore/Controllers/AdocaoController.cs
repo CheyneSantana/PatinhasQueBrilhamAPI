@@ -111,5 +111,21 @@ namespace PatinhasQueBrilham.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpDelete("[action]")]
+        public IActionResult DeletarAnimal(string AnimaisAdocaoId)
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.ExcluirAnimal(int.Parse(AnimaisAdocaoId));
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

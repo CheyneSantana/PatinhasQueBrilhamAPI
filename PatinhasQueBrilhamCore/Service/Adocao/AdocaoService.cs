@@ -2,6 +2,7 @@
 using PatinhasQueBrilham.DTO;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
+using PatinhasQueBrilhamCore.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,12 @@ namespace PatinhasQueBrilham.Service
         {
             SolicitarAdocaoTask solicitarAdocaoTask = new SolicitarAdocaoTask(this._context, formulario, mapper);
             solicitarAdocaoTask.Solicitar();
+        }
+
+        public void ExcluirAnimal(int prAnimalId)
+        {
+            ExcluirAnimalAdocaoTask excluirAnimalAdocaoTask = new ExcluirAnimalAdocaoTask(prAnimalId, this._context);
+            excluirAnimalAdocaoTask.excluir();
         }
     }
 }
