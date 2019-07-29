@@ -127,5 +127,21 @@ namespace PatinhasQueBrilham.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpPut("[action]")]
+        public IActionResult AtualizarAnimal([FromBody]AnimaisAdocao animal)
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.AtualizarAnimal(animal);
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

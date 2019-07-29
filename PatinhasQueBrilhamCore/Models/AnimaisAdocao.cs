@@ -12,40 +12,24 @@ namespace PatinhasQueBrilham.Models
         [Key]
         public int AnimaisAdocaoId { get; set; }
         public string NomeAntigo { get; set; }
-        [Required]
         public string NomeAtual { get; set; }
-        [Required]
         public int Especie { get; set; }
-        [Required]
         public int Sexo { get; set; }
-        [Required]
         public int Idade { get; set; }
-        [Required]
         public int Adulto { get; set; }
-        [Required]
         public string Raca { get; set; }
-        [Required]
         public string CorPelagem { get; set; }
-        [Required]
         public int Porte { get; set; }
-        [Required]
         public int Castrado { get; set; }
-        [Required]
         public int Vermifugado { get; set; }
-        [Required]
         public int Raiva { get; set; }
-        [Required]
         public int V10 { get; set; }
-        [Required]
         public int Quadrupla { get; set; }
-        [Required]
         public int Dose { get; set; }
         public int Microchip { get; set; }
         public int RGA { get; set; }
-        [Required]
         public string PathFoto { get; set; }
-        [Required]
-        public int Adotado { get; set; }
+        public int Ativo { get; set; }
 
         public enum KdAtivo
         {

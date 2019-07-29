@@ -33,7 +33,7 @@ namespace PatinhasQueBrilham.Service
         public void FindAllAnimais()
         {
             FindAnimaisAdocaoTask findAnimaisAdocao = new FindAnimaisAdocaoTask(this._context);
-            findAnimaisAdocao.buscar();
+            findAnimaisAdocao.buscarTodos();
             this.animais = findAnimaisAdocao.animais;
         }
 
@@ -68,6 +68,12 @@ namespace PatinhasQueBrilham.Service
         {
             ExcluirAnimalAdocaoTask excluirAnimalAdocaoTask = new ExcluirAnimalAdocaoTask(prAnimalId, this._context);
             excluirAnimalAdocaoTask.excluir();
+        }
+
+        public void AtualizarAnimal(AnimaisAdocao animal)
+        {
+            AtualizarAnimalTaks atualizarAnimal = new AtualizarAnimalTaks(animal, this._context);
+            atualizarAnimal.Atualizar();
         }
     }
 }

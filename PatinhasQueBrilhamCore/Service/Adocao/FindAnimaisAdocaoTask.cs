@@ -21,7 +21,7 @@ namespace PatinhasQueBrilham.Service
 
         private void getAnimais()
         {
-            animais = this._context.adocao.Where(w => w.Adotado == (int)AppSettings.KdAtivo.Não);
+            animais = this._context.adocao.Where(w => w.Ativo == (int)AppSettings.KdAtivo.Sim);
         }
 
         private void getAll()
@@ -32,7 +32,7 @@ namespace PatinhasQueBrilham.Service
         private void getNomeAnimal()
         {
             animais = this._context.adocao.Where(w => w.NomeAtual.ToUpper().Contains(this.NomeAnimal.ToUpper()));
-            if (animais != null)
+            if (animais == null)
                 throw new AppException("Nenhum animal encontrado com esse nome");
         }
 
