@@ -2,6 +2,7 @@
 using PatinhasQueBrilham.DTO;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
+using PatinhasQueBrilhamCore.DTO;
 using PatinhasQueBrilhamCore.Service;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace PatinhasQueBrilham.Service
         public IEnumerable<AnimaisAdocao> animais;
         public ViaCEPResult viaCEPResult;
         public IntermediadorAdocao intermediador;
+        public IEnumerable<AdotanteDTO> adotanteDTOs;
 
         public AdocaoService(PatinhasContext context)
         {
@@ -74,6 +76,19 @@ namespace PatinhasQueBrilham.Service
         {
             AtualizarAnimalTaks atualizarAnimal = new AtualizarAnimalTaks(animal, this._context);
             atualizarAnimal.Atualizar();
+        }
+
+        public void FindAdotantes(AnimaisAdocao animal)
+        {
+            FindAdotanteAnimalTask findAdotanteAnimal = new FindAdotanteAnimalTask(animal, this._context);
+            findAdotanteAnimal.Find();
+            this.adotanteDTOs = findAdotanteAnimal.adotantes;
+        }
+
+        public void AtualizarSolicitacao(AdotanteDTO adotanteDTO, int estado)
+        {
+            AtualizarAdotanteAnimalAdocaoTask atualizarAdotanteAnimalAdocaoTask = new AtualizarAdotanteAnimalAdocaoTask(adotanteDTO, estado, this._context);
+            atualizarAdotanteAnimalAdocaoTask.atualizar();
         }
     }
 }

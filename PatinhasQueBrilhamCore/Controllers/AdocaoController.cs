@@ -10,6 +10,7 @@ using PatinhasQueBrilham.Helpers;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
 using PatinhasQueBrilham.Service;
+using PatinhasQueBrilhamCore.DTO;
 using ViaCEP;
 
 namespace PatinhasQueBrilham.Controllers
@@ -135,6 +136,54 @@ namespace PatinhasQueBrilham.Controllers
             {
                 AdocaoService adocaoService = new AdocaoService(this._context);
                 adocaoService.AtualizarAnimal(animal);
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult GetAdotantesAnimal([FromHeader]AnimaisAdocao animal)
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.FindAdotantes(animal);
+
+                return Ok(adocaoService.adotanteDTOs);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("[action]")]
+        public IActionResult ConfirmarAdocao([FromBody]AdotanteDTO adotante)
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.AtualizarSolicitacao(adotante, (int)AdotanteAnimalAdocao.KdEstado.Finalizado);
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("[action]")]
+        public IActionResult CancelarSolicitacao([FromBody]AdotanteDTO adotante)
+        {
+            try
+            {
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.AtualizarSolicitacao(adotante, (int)AdotanteAnimalAdocao.KdEstado.Cancelado);
 
                 return Ok();
             }
