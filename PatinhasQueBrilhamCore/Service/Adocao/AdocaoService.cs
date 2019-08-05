@@ -90,5 +90,11 @@ namespace PatinhasQueBrilham.Service
             AtualizarAdotanteAnimalAdocaoTask atualizarAdotanteAnimalAdocaoTask = new AtualizarAdotanteAnimalAdocaoTask(adotanteDTO, estado, this._context);
             atualizarAdotanteAnimalAdocaoTask.atualizar();
         }
+
+        public void InserirAnimalAdocao(AnimaisAdocao animal)
+        {
+            InserirAnimalAdocaoTask inserirAnimalAdocaoTask = new InserirAnimalAdocaoTask(animal, this._context);
+            inserirAnimalAdocaoTask.inserir();
+        }
     }
 }
