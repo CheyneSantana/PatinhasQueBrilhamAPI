@@ -64,12 +64,12 @@ namespace PatinhasQueBrilham.Controllers
         }
 
         [HttpGet("[action]")]
-        public IActionResult getNomeAnimal([FromHeader]AnimaisAdocao animal)
+        public IActionResult getNomeAnimal(string nomeAnimal)
         {
             try
             {
                 AdocaoService adocaoService = new AdocaoService(this._context);
-                adocaoService.findNomeAnimal(animal.NomeAtual);
+                adocaoService.findNomeAnimal(nomeAnimal);
                 if (adocaoService.animais != null)
                     return Ok(adocaoService.animais);
                 else
