@@ -1,5 +1,4 @@
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.csprojAssemblyReference.cache
-C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.csproj.CoreCompileInputs.cache
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.RazorAssemblyInfo.cache
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.RazorAssemblyInfo.cs
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.AssemblyInfoInputs.cache
@@ -22,6 +21,5 @@ C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBri
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\PatinhasQueBrilhamCore.csproj.CopyComplete
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\bin\Debug\netcoreapp2.2\appsettings.json
-C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Cheyne\Documents\Projetos\Pessoal\PatinhasQueBrilhamCore\PatinhasQueBrilhamCore\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.cshtml.g.cs

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -200,6 +201,23 @@ namespace PatinhasQueBrilham.Controllers
             {
                 AdocaoService adocaoService = new AdocaoService(this._context);
                 adocaoService.InserirAnimalAdocao(animal);
+
+                return Ok(animal);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult UploadImagem()
+        {
+            try
+            {
+                IFormFile file = Request.Form.Files[0];
+                AdocaoService adocaoService = new AdocaoService(this._context);
+                adocaoService.UploadImagem(file);
 
                 return Ok();
             }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using PatinhasQueBrilham.DTO;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
@@ -95,6 +96,12 @@ namespace PatinhasQueBrilham.Service
         {
             InserirAnimalAdocaoTask inserirAnimalAdocaoTask = new InserirAnimalAdocaoTask(animal, this._context);
             inserirAnimalAdocaoTask.inserir();
+        }
+
+        public void UploadImagem(IFormFile file)
+        {
+            UploadImagemTask uploadImagemTask = new UploadImagemTask(file, this._context);
+            uploadImagemTask.upload();
         }
     }
 }

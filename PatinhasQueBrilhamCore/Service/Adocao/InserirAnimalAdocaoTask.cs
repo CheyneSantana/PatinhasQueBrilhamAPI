@@ -21,6 +21,7 @@ namespace PatinhasQueBrilhamCore.Service
         private void salvar()
         {
             this.context.adocao.Add(this.animal);
+            this.context.SaveChanges();
         }
 
         public void inserir()
