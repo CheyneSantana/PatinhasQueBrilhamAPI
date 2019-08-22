@@ -10,13 +10,13 @@ namespace PatinhasQueBrilhamCore.Service
 {
     public class FindAdotanteAnimalTask
     {
-        private AnimaisAdocao animal;
+        private int animaisAdocaoId;
         private PatinhasContext _context;
         public IList<AdotanteDTO> adotantes;
 
-        public FindAdotanteAnimalTask(AnimaisAdocao animal, PatinhasContext context)
+        public FindAdotanteAnimalTask(int animaisAdocaoId, PatinhasContext context)
         {
-            this.animal = animal;
+            this.animaisAdocaoId = animaisAdocaoId;
             _context = context;
             this.adotantes = new List<AdotanteDTO>();
         }
@@ -24,7 +24,7 @@ namespace PatinhasQueBrilhamCore.Service
         private void getAdotantes()
         {
             IEnumerable<AdotanteAnimalAdocao> adotanteAnimalAdocao;
-            adotanteAnimalAdocao = this._context.adotanteAnimalAdocao.Where(w => w.AnimaisAdocaoId == this.animal.AnimaisAdocaoId);
+            adotanteAnimalAdocao = this._context.adotanteAnimalAdocao.Where(w => w.AnimaisAdocaoId == this.animaisAdocaoId);
 
             foreach (AdotanteAnimalAdocao adotanteAnimal in adotanteAnimalAdocao)
             {

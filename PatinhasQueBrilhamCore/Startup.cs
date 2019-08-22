@@ -43,6 +43,13 @@ namespace PatinhasQueBrilhamCore
             //services.AddDbContext<PatinhasContext>(options => options.UseMySql(connection));
             services.AddDbContext<PatinhasContext>(options => options.UseSqlServer(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperProfile());
+            });
+
+            IMapper iMapper = mappingConfig.CreateMapper();
+            services.AddSingleton(iMapper);
 
             var appSettingSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingSection);

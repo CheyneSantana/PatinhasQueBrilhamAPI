@@ -79,9 +79,9 @@ namespace PatinhasQueBrilham.Service
             atualizarAnimal.Atualizar();
         }
 
-        public void FindAdotantes(AnimaisAdocao animal)
+        public void FindAdotantes(int animaisAdocaoId)
         {
-            FindAdotanteAnimalTask findAdotanteAnimal = new FindAdotanteAnimalTask(animal, this._context);
+            FindAdotanteAnimalTask findAdotanteAnimal = new FindAdotanteAnimalTask(animaisAdocaoId, this._context);
             findAdotanteAnimal.Find();
             this.adotanteDTOs = findAdotanteAnimal.adotantes;
         }

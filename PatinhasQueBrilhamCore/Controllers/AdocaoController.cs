@@ -147,12 +147,12 @@ namespace PatinhasQueBrilham.Controllers
         }
 
         [HttpGet("[action]")]
-        public IActionResult GetAdotantesAnimal([FromHeader]AnimaisAdocao animal)
+        public IActionResult GetAdotantesAnimal(string AnimaisAdocaoId)
         {
             try
             {
                 AdocaoService adocaoService = new AdocaoService(this._context);
-                adocaoService.FindAdotantes(animal);
+                adocaoService.FindAdotantes(int.Parse(AnimaisAdocaoId));
 
                 return Ok(adocaoService.adotanteDTOs);
             }

@@ -3084,7 +3084,7 @@
           }
         }
       },
-      "Spire.Doc/7.8.8": {
+      "Spire.Doc/7.8.12": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.5.0",
@@ -7962,10 +7962,10 @@
         "version.txt"
       ]
     },
-    "Spire.Doc/7.8.8": {
-      "sha512": "2SauCxHHsx8FKxMlUxKDBt+SQY6Rt0oQQV67veLgFjTem4U7gPXCou/ChtZRdHY/CxghozUjCqkgQXx9wBSk6A==",
+    "Spire.Doc/7.8.12": {
+      "sha512": "OG+IuDoxHwcTezlLLgc5xE4HvtgOttKCa7Sh55DWYoW/i44ZxLI+1YeJA6LgdnTZxaQuPEeDEtYrBrlgfkGy3w==",
       "type": "package",
-      "path": "spire.doc/7.8.8",
+      "path": "spire.doc/7.8.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8006,7 +8006,7 @@
         "lib/netstandard2.0/Spire.Pdf.dll",
         "lib/netstandard2.0/Spire.Pdf.xml",
         "license.txt",
-        "spire.doc.7.8.8.nupkg.sha512",
+        "spire.doc.7.8.12.nupkg.sha512",
         "spire.doc.nuspec"
       ]
     },
@@ -12459,7 +12459,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Pomelo.EntityFrameworkCore.MySql >= 2.2.0",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2",
-      "Spire.Doc >= 7.8.8",
+      "Spire.Doc >= 7.8.12",
       "ViaCEP >= 2.0.48"
     ]
   },
@@ -12539,7 +12539,7 @@
           },
           "Spire.Doc": {
             "target": "Package",
-            "version": "[7.8.8, )"
+            "version": "[7.8.12, )"
           },
           "ViaCEP": {
             "target": "Package",
