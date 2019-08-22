@@ -7,18 +7,6 @@ namespace PatinhasQueBrilham.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "idadePet",
-                table: "reserva",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<string>(
-                name: "portePet",
-                table: "reserva",
-                nullable: false,
-                defaultValue: "");
-
             migrationBuilder.CreateTable(
                 name: "capa",
                 columns: table => new
@@ -41,14 +29,6 @@ namespace PatinhasQueBrilham.Migrations
         {
             migrationBuilder.DropTable(
                 name: "capa");
-
-            migrationBuilder.DropColumn(
-                name: "idadePet",
-                table: "reserva");
-
-            migrationBuilder.DropColumn(
-                name: "portePet",
-                table: "reserva");
         }
     }
 }

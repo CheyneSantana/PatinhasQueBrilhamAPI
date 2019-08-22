@@ -6,11 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.1.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Spire.Doc" Version="7.6.5" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+    <PackageReference Include="Spire.Doc" Version="7.8.8" />
     <PackageReference Include="ViaCEP" Version="2.0.48" />
   </ItemGroup>
 

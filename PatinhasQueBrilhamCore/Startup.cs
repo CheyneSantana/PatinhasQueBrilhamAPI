@@ -33,13 +33,16 @@ namespace PatinhasQueBrilhamCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //string connection = @"Server=(LocalDb)\MSSQLLocalDB;Database=PatinhasDB;Trusted_Connection=True;ConnectRetryCount=0;";
+            //MSSQL Server
+            //string connection = @"Server=35.199.103.219;Database=patinhasdb;Trusted_Connection=False;ConnectRetryCount=0;User=patinhas;Password=patinhas2019@";
+            //My SQL
+            //string connection = @"Server=35.199.103.219;Database=patinhasdb;Uid=patinhas;Pwd=patinhas2019@";
             string connection = @"Server=192.168.1.2;Database=PatinhasQueBrilham_db;Trusted_Connection=False;ConnectRetryCount=0;User=SA;Password=Cheyne2019@";
 
             services.AddCors();
+            //services.AddDbContext<PatinhasContext>(options => options.UseMySql(connection));
             services.AddDbContext<PatinhasContext>(options => options.UseSqlServer(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddAutoMapper();
 
             var appSettingSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingSection);
@@ -76,6 +79,16 @@ namespace PatinhasQueBrilhamCore
                     ValidateAudience = false
 
                 };
+            });
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AutomaticAuthentication = false;
+            });
+
+            services.Configure<IISOptions>(options =>
+            {
+                options.ForwardClientCertificate = false;
             });
 
             services.AddScoped<IUserService, UserService>();

@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PatinhasQueBrilham.Repository;
 
@@ -15,15 +14,13 @@ namespace PatinhasQueBrilham.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("PatinhasQueBrilham.Models.Adotante", b =>
                 {
                     b.Property<int>("AdotanteId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Bairro");
 
@@ -61,8 +58,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.AdotanteAnimalAdocao", b =>
                 {
                     b.Property<int>("AdotanteAnimalAdocaoId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("AdotanteId");
 
@@ -78,8 +74,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.AnimaisAdocao", b =>
                 {
                     b.Property<int>("AnimaisAdocaoId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("Adotado");
 
@@ -131,8 +126,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.Apoio", b =>
                 {
                     b.Property<int>("apoioId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("ativo");
 
@@ -150,8 +144,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.Capa", b =>
                 {
                     b.Property<int>("capaId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("ativo");
 
@@ -168,8 +161,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.IntermediadorAdocao", b =>
                 {
                     b.Property<int>("IntermediadorAdocaoId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("Ativo");
 
@@ -191,8 +183,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.Reserva", b =>
                 {
                     b.Property<int>("reservaId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("celular")
                         .IsRequired();
@@ -206,7 +197,7 @@ namespace PatinhasQueBrilham.Migrations
 
                     b.Property<DateTime>("fromDate");
 
-                    b.Property<int>("idadePet");
+                    b.Property<int?>("idadePet");
 
                     b.Property<string>("nomeDono")
                         .IsRequired();
@@ -214,8 +205,7 @@ namespace PatinhasQueBrilham.Migrations
                     b.Property<string>("nomePet")
                         .IsRequired();
 
-                    b.Property<string>("portePet")
-                        .IsRequired();
+                    b.Property<string>("portePet");
 
                     b.Property<string>("raca")
                         .IsRequired();
@@ -239,8 +229,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.Settings", b =>
                 {
                     b.Property<int>("SettingsId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Chave");
 
@@ -254,8 +243,7 @@ namespace PatinhasQueBrilham.Migrations
             modelBuilder.Entity("PatinhasQueBrilham.Models.User", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
 
