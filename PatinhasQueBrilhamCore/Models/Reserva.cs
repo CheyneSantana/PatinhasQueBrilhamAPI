@@ -18,9 +18,7 @@ namespace PatinhasQueBrilham.Models
         public string tipoPet { get; set; }
         [Required]
         public string raca { get; set; }
-        [Required]
         public int idadePet { get; set; }
-        [Required]
         public string portePet { get; set; }
         public string residencial { get; set; }
         [Required]
