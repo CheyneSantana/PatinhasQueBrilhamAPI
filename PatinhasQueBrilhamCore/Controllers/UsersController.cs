@@ -36,7 +36,7 @@ namespace PatinhasQueBrilham.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("authenticate")]
+        [HttpPost("[action]")]
         public IActionResult Authenticate([FromBody]UserDTO userDto)
         {
             User user = _userService.Authenticate(userDto.Email, userDto.Password);
@@ -72,7 +72,7 @@ namespace PatinhasQueBrilham.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("register")]
+        [HttpPost("[action]")]
         public IActionResult Register([FromBody]UserDTO userDto)
         {
             User user = _mapper.Map<User>(userDto);
@@ -146,7 +146,7 @@ namespace PatinhasQueBrilham.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPut("ResetarSenha")]
+        [HttpPut("[action]")]
         public IActionResult ResetarSenha([FromBody] UserDTO userDTO)
         {
             try

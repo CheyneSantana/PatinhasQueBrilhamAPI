@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {}
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
         "projectName": "PatinhasQueBrilhamCore",
-        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
         "packagesPath": "C:\\Users\\Cheyne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\",
+        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,11 +43,11 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[8.1.1, )"
+              "version": "[9.0.0, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[6.1.1, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -66,9 +66,17 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
             "Spire.Doc": {
               "target": "Package",
-              "version": "[7.6.5, )"
+              "version": "[7.8.8, )"
             },
             "ViaCEP": {
               "target": "Package",
