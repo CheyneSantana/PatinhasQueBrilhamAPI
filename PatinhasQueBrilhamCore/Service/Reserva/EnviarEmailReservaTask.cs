@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
+using PatinhasQueBrilhamCore.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,17 +16,11 @@ namespace PatinhasQueBrilham.Service
     {
         private Reserva _reserva;
         private PatinhasContext _context;
-        private string emailFrom;
-        private string emailTo;
-        private string senhaEmail;
 
         public EnviarEmailReservaTask(Reserva reserva, PatinhasContext context)
         {
             _reserva = reserva;
             this._context = context;
-            this.emailTo = this._context.settings.Where(w => w.Chave == "EMAIL_TO").Select(s => s.Valor).FirstOrDefault();
-            this.emailFrom = this._context.settings.Where(w => w.Chave == "EMAIL_FROM").Select(s => s.Valor).FirstOrDefault();
-            this.senhaEmail = this._context.settings.Where(w => w.Chave == "EMAIL_SENHA").Select(s => s.Valor).FirstOrDefault();
         }
 
         private string montarBodyReserva()
@@ -140,61 +135,36 @@ namespace PatinhasQueBrilham.Service
 
             return sb.ToString();
         }
-
-        private void enviarEmail(MailMessage message)
-        {
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
-            {
-                client.EnableSsl = true;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(this.emailFrom, this.senhaEmail);
-
-                client.Send(message);
-            }
-        }
-
+        
         public void EnviarEmailReserva()
         {
-            MailMessage mailMessage = new MailMessage(emailFrom, emailTo);
-
-            mailMessage.Body = montarBodyReserva();
-            mailMessage.Subject = "Solicitação agendamento hotel";
-            this.enviarEmail(mailMessage);
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(this.montarBodyReserva(), "Solicitação agendamento hotel", this._context);
+            enviarEmailTask.Enviar();
         }
 
         public void EnviarEmailCancelamento()
         {
-            MailMessage mailMessage = new MailMessage(emailFrom, emailTo);
-            mailMessage.Body = montarBodyCancelamento();
-            mailMessage.Subject = "Cancelamento de reserva";
-            this.enviarEmail(mailMessage);
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(this.montarBodyCancelamento(), "Cancelamento de reserva", this._context);
+            enviarEmailTask.Enviar();
         }
 
         public void EnviarEmailAlteracao(PatinhasContext context)
         {
-            MailMessage mailMessage = new MailMessage(emailFrom, emailTo);
-            _context = context;
-            mailMessage.Body = montarBodyAlteracao();
-            mailMessage.Subject = "Alteracao de reserva";
-            this.enviarEmail(mailMessage);
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(this.montarBodyAlteracao(), "Alteração de reserva", this._context);
+            enviarEmailTask.Enviar();
 
         }
 
         public void EnviarEmailConfirmacaoReserva()
         {
-            MailMessage mail = new MailMessage(emailFrom, this._reserva.email);
-            mail.Body = this.montarBodyConfirmacaoReserva();
-            mail.Subject = "Confirmação reserva Hotel Patinhas que brilham";
-            this.enviarEmail(mail);
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(this.montarBodyConfirmacaoReserva(), "Confirmação reserva Hotel Ong Patinhas que Brilham", this._context);
+            enviarEmailTask.Enviar(this._reserva.email);
         }
 
         public void EnviarEmailConfirmacaoCancelamento()
         {
-            MailMessage mail = new MailMessage(emailFrom, this._reserva.email);
-            mail.Body = this.montarBodyConfirmacaoReserva();
-            mail.Subject = "Confirmação cancelamento reserva Hotel Patinhas que brilham";
-            this.enviarEmail(mail);
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(this.montarBodyConfirmacaoReserva(), "Confirmação cancelamento reserva Hotel Ong Patinhas que Brilham", this._context);
+            enviarEmailTask.Enviar(this._reserva.email);
         }
     }
 }
