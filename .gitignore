@@ -2,30 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-*.ide
-*.ide-shm
-*.ide-wal
-*.lock
-*.config
-*.cache
-*.suo
-.vs/PatinhasQueBrilham/v16/.suo
-.vs\PatinhasQueBrilham\v16\.suo
-.vs\PatinhasQueBrilham\DesignTimeBuild
-
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
-[Oo]ut/
-msbuild.log
-msbuild.err
-msbuild.wrn
+/.vs/PatinhasQueBrilhamCore/v16
 /PatinhasQueBrilhamCore/Properties/PublishProfiles

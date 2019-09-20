@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": ""
+    "signature": "c2ef1fdf8542e56eb75e1131b5fae43e7b7e0774"
   },
   "compilationOptions": {
     "defines": [
@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP2_2"
     ],
-    "languageVersion": "7.3",
+    "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -31,7 +31,7 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
           "Pomelo.EntityFrameworkCore.MySql.Design": "1.1.2",
-          "Spire.Doc": "7.8.12",
+          "Spire.Doc": "7.8.8",
           "ViaCEP": "2.0.48"
         },
         "runtime": {
@@ -192,7 +192,7 @@
           "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
-      "Spire.Doc/7.8.12": {
+      "Spire.Doc/7.8.8": {
         "dependencies": {
           "System.Drawing.Common": "4.5.0",
           "System.Security.Cryptography.Xml": "4.5.0",
@@ -200,16 +200,16 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/Spire.Doc.dll": {
-            "assemblyVersion": "7.8.12.4420",
-            "fileVersion": "7.8.12.4420"
+            "assemblyVersion": "7.8.8.4420",
+            "fileVersion": "7.8.8.4420"
           },
           "lib/netcoreapp2.0/Spire.License.dll": {
             "assemblyVersion": "1.3.7.320",
             "fileVersion": "1.3.7.320"
           },
           "lib/netcoreapp2.0/Spire.Pdf.dll": {
-            "assemblyVersion": "5.8.8.18420",
-            "fileVersion": "5.8.8.18420"
+            "assemblyVersion": "5.8.7.2420",
+            "fileVersion": "5.8.7.2420"
           }
         },
         "compile": {
@@ -3521,12 +3521,12 @@
       "path": "pomelo.jsonobject/2.2.0",
       "hashPath": "pomelo.jsonobject.2.2.0.nupkg.sha512"
     },
-    "Spire.Doc/7.8.12": {
+    "Spire.Doc/7.8.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OG+IuDoxHwcTezlLLgc5xE4HvtgOttKCa7Sh55DWYoW/i44ZxLI+1YeJA6LgdnTZxaQuPEeDEtYrBrlgfkGy3w==",
-      "path": "spire.doc/7.8.12",
-      "hashPath": "spire.doc.7.8.12.nupkg.sha512"
+      "sha512": "sha512-2SauCxHHsx8FKxMlUxKDBt+SQY6Rt0oQQV67veLgFjTem4U7gPXCou/ChtZRdHY/CxghozUjCqkgQXx9wBSk6A==",
+      "path": "spire.doc/7.8.8",
+      "hashPath": "spire.doc.7.8.8.nupkg.sha512"
     },
     "System.Drawing.Common/4.5.0": {
       "type": "package",

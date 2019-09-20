@@ -1,6 +1,7 @@
 ﻿using PatinhasQueBrilham.Helpers;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
+using PatinhasQueBrilhamCore.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,6 @@ namespace PatinhasQueBrilham.Service
         private AppAccount appAccount;
         private User _user;
         private string _newPassword;
-        private string emailFrom = "cheyne.santana@gmail.com";
 
         public ResetPassword(PatinhasContext context, string email)
         {
@@ -65,23 +65,10 @@ namespace PatinhasQueBrilham.Service
 
         private void sendNewPassword()
         {
-            MailMessage mail = new MailMessage(this.emailFrom, this._email);
-            mail.Body = "Sua nova senha no patinhas é " + this._newPassword + " após acessar, por favor alterar a senha";
-            mail.Subject = "Alteração de senha";
-            this.enviarEmail(mail);
-        }
+            string body = "Sua nova senha no patinhas é " + this._newPassword + " após acessar, por favor alterar a senha";
 
-        private void enviarEmail(MailMessage message)
-        {
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
-            {
-                client.EnableSsl = true;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential("cheyne.santana@gmail.com", "B4tm4n2017//");
-
-                client.Send(message);
-            }
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(body, "Alteração de senha", this._context);
+            enviarEmailTask.Enviar(this._email);
         }
 
         private void getUser()

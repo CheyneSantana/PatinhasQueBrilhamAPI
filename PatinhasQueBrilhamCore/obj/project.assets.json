@@ -3084,7 +3084,7 @@
           }
         }
       },
-      "Spire.Doc/7.8.12": {
+      "Spire.Doc/7.8.8": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.5.0",
@@ -7779,7 +7779,6 @@
       "path": "runtime.native.system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -7793,6 +7792,7 @@
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -7845,6 +7845,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -7962,10 +7963,10 @@
         "version.txt"
       ]
     },
-    "Spire.Doc/7.8.12": {
-      "sha512": "OG+IuDoxHwcTezlLLgc5xE4HvtgOttKCa7Sh55DWYoW/i44ZxLI+1YeJA6LgdnTZxaQuPEeDEtYrBrlgfkGy3w==",
+    "Spire.Doc/7.8.8": {
+      "sha512": "2SauCxHHsx8FKxMlUxKDBt+SQY6Rt0oQQV67veLgFjTem4U7gPXCou/ChtZRdHY/CxghozUjCqkgQXx9wBSk6A==",
       "type": "package",
-      "path": "spire.doc/7.8.12",
+      "path": "spire.doc/7.8.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8006,7 +8007,7 @@
         "lib/netstandard2.0/Spire.Pdf.dll",
         "lib/netstandard2.0/Spire.Pdf.xml",
         "license.txt",
-        "spire.doc.7.8.12.nupkg.sha512",
+        "spire.doc.7.8.8.nupkg.sha512",
         "spire.doc.nuspec"
       ]
     },
@@ -10075,6 +10076,7 @@
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10110,6 +10112,7 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10154,6 +10157,7 @@
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -11425,6 +11429,7 @@
       "path": "system.security.principal/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12007,7 +12012,6 @@
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12405,6 +12409,7 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12459,7 +12464,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Pomelo.EntityFrameworkCore.MySql >= 2.2.0",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2",
-      "Spire.Doc >= 7.8.12",
+      "Spire.Doc >= 7.8.8",
       "ViaCEP >= 2.0.48"
     ]
   },
@@ -12470,11 +12475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+      "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
       "projectName": "PatinhasQueBrilhamCore",
-      "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+      "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
       "packagesPath": "C:\\Users\\Cheyne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\",
+      "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12539,7 +12544,7 @@
           },
           "Spire.Doc": {
             "target": "Package",
-            "version": "[7.8.12, )"
+            "version": "[7.8.8, )"
           },
           "ViaCEP": {
             "target": "Package",
@@ -12547,16 +12552,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview8-013656\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

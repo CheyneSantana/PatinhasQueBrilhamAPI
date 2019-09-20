@@ -2,6 +2,7 @@
 using PatinhasQueBrilham.Helpers;
 using PatinhasQueBrilham.Models;
 using PatinhasQueBrilham.Repository;
+using PatinhasQueBrilhamCore.Helpers;
 using Spire.Doc;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,6 @@ namespace PatinhasQueBrilham.Service
         private AnimaisAdocao animal;
         private IntermediadorAdocao intermediador;
         private PatinhasContext context;
-        private string emailTo;
-        private string emailFrom;
-        private string senhaEmail;
 
         public EnviarEmailSolicitacaoAdocao(PatinhasContext context, Adotante adotante, AnimaisAdocao animal, IntermediadorAdocao intermediador)
         {
@@ -31,30 +29,14 @@ namespace PatinhasQueBrilham.Service
             this.animal = animal;
             this.intermediador = intermediador;
             this.context = context;
-            this.emailTo = this.context.settings.Where(w => w.Chave == "EMAIL_TO").Select(s => s.Valor).FirstOrDefault();
-            this.emailFrom = this.context.settings.Where(w => w.Chave == "EMAIL_FROM").Select(s => s.Valor).FirstOrDefault();
-            this.senhaEmail = this.context.settings.Where(w => w.Chave == "EMAIL_SENHA").Select(s => s.Valor).FirstOrDefault();
         }
 
         private void enviarEmail()
         {
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
-            {
-                MailMessage mail = new MailMessage(this.emailFrom, this.emailTo);
-                mail.Body = "Segue me anexo solicitação para adoção do(a): " + this.adotante.Nome;
-                mail.Subject = "Solicitação de Adoção";
-                mail.Attachments.Add(this.montarDoc());
+            string body = "Segue me anexo solicitação para adoção do(a): " + this.adotante.Nome;
 
-                client.EnableSsl = true;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(this.emailFrom, this.senhaEmail);
-
-                client.Send(mail);
-
-                client.Dispose();
-                mail.Dispose();
-            }
+            EnviarEmailTask enviarEmailTask = new EnviarEmailTask(body, "Solicitação de Adoção", this.context);
+            enviarEmailTask.Enviar(this.montarDoc());
         }
 
         private Attachment montarDoc()

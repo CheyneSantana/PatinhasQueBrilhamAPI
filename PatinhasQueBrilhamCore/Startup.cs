@@ -34,10 +34,9 @@ namespace PatinhasQueBrilhamCore
         public void ConfigureServices(IServiceCollection services)
         {
             //MSSQL Server
-            //string connection = @"Server=35.199.103.219;Database=patinhasdb;Trusted_Connection=False;ConnectRetryCount=0;User=patinhas;Password=patinhas2019@";
-            //My SQL
-            //string connection = @"Server=35.199.103.219;Database=patinhasdb;Uid=patinhas;Pwd=patinhas2019@";
-            string connection = @"Server=192.168.1.2;Database=PatinhasQueBrilham_db;Trusted_Connection=False;ConnectRetryCount=0;User=SA;Password=Cheyne2019@";
+            //string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Patinhas2019@";
+            //MSSQL Server Testes
+            string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhasTeste;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhasTeste_admin;Password=Patinhas2019@";
 
             services.AddCors();
             //services.AddDbContext<PatinhasContext>(options => options.UseMySql(connection));
@@ -56,6 +55,17 @@ namespace PatinhasQueBrilhamCore
 
             var appSettings = appSettingSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+
+            // Auto Mapper Configurations
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddMvc();
 
             services.AddAuthentication(x =>
             {

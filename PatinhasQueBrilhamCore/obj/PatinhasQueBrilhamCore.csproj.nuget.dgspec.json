@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {}
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {
+    "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "projectUniqueName": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
         "projectName": "PatinhasQueBrilhamCore",
-        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
+        "projectPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore.csproj",
         "packagesPath": "C:\\Users\\Cheyne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\Pessoal\\PatinhasQueBrilhamCore\\PatinhasQueBrilhamCore\\obj\\",
+        "outputPath": "C:\\Users\\Cheyne\\Documents\\Projetos\\PatinhasQueBrilhamAPI\\PatinhasQueBrilhamCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -76,7 +76,7 @@
             },
             "Spire.Doc": {
               "target": "Package",
-              "version": "[7.8.12, )"
+              "version": "[7.8.8, )"
             },
             "ViaCEP": {
               "target": "Package",
@@ -84,16 +84,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview8-013656\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

@@ -21,7 +21,7 @@ namespace PatinhasQueBrilham.Controllers
             _context = context;
         }
 
-        [HttpGet("GetCapas")]
+        [HttpGet("[action]")]
         public IActionResult GetCapas()
         {
             try
