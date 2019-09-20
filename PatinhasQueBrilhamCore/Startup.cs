@@ -35,9 +35,8 @@ namespace PatinhasQueBrilhamCore
         {
             //MSSQL Server
             string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Cheyne2019@";
-            //My SQL
-            //string connection = @"Server=35.199.103.219;Database=patinhasdb;Uid=patinhas;Pwd=patinhas2019@";
-            //string connection = @"Server=192.168.1.2;Database=PatinhasQueBrilham_db;Trusted_Connection=False;ConnectRetryCount=0;User=SA;Password=Cheyne2019@";
+            //MSSQL Server Testes
+            //string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Cheyne2019@";
 
             services.AddCors();
             //services.AddDbContext<PatinhasContext>(options => options.UseMySql(connection));
