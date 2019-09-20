@@ -29,5 +29,5 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 /PatinhasQueBrilhamCore/Properties/PublishProfiles
-/PatinhasQueBrilhamCore/[Bb]in/
-/PatinhasQueBrilhamCore/[Oo]bj/
+/PatinhasQueBrilhamCore/[Bb]in/*
+/PatinhasQueBrilhamCore/[Oo]bj/*

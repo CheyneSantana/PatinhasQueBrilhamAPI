@@ -34,9 +34,9 @@ namespace PatinhasQueBrilhamCore
         public void ConfigureServices(IServiceCollection services)
         {
             //MSSQL Server
-            string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Cheyne2019@";
+            //string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Patinhas2019@";
             //MSSQL Server Testes
-            //string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhas;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhas_admin;Password=Cheyne2019@";
+            string connection = @"Server=sql5045.site4now.net;Database=DB_A4CA0E_patinhasTeste;Trusted_Connection=False;ConnectRetryCount=0;User=DB_A4CA0E_patinhasTeste_admin;Password=Patinhas2019@";
 
             services.AddCors();
             //services.AddDbContext<PatinhasContext>(options => options.UseMySql(connection));
